@@ -1,0 +1,39 @@
+.section {
+  padding: 80px 0;
+  position: relative;
+  background-color: #fff;
+  text-align: center;
+
+  &__title {
+    font-size: 42px;
+    padding-bottom: 30px;
+
+    @mixin atSmallMedium {
+      font-size: 28px;
+    }
+  }
+  &__subtitle {
+    font-size: 27px;
+    padding-bottom: 30px;
+
+    @mixin atSmallMedium {
+      font-size: 18px;
+    }
+  }
+  &__txt {
+    font-size: 22px;
+    font-weight: 200;
+
+    @mixin atSmallMedium {
+      font-size: 16px;
+    }
+  }
+
+  &:last-child {
+    padding-bottom: 240px;
+
+    @mixin atSmallMedium {
+      padding-bottom: 320px;
+    }
+  }
+}

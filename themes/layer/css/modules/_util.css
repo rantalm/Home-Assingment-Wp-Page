@@ -1,0 +1,30 @@
+.content {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  z-index: 5;
+  position: relative;
+
+  @mixin atMedium {
+    width: 90%;
+  }
+
+  &--wide {
+    width: 80%;
+    max-width: 1520px;
+
+    @mixin atSmallMedium {
+      width: 100%;
+    }
+  }
+}
+
+.test-page-link {
+  position: absolute;
+  top: 300px;
+  color: #000;
+  font-size: 32px;
+  margin: 0 auto;
+  left: 50%;
+  transform: translateX(-50%);
+}

@@ -1,0 +1,66 @@
+.hero {
+  height: 880px;
+  text-align: center;
+  color: #fff;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @mixin atSmallMedium {
+    height: 80vh;
+  }
+
+  &::after {
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.4);
+    top: 0;
+    left: 0;
+  }
+
+  &__content {
+    position: relative;
+    top: calc(50% - 100px);
+    z-index: 5;
+  }
+
+  &__title {
+    font-size: 60px;
+    margin-bottom: 35px;
+
+    @mixin atMedium {
+      font-size: 40px;
+      width: 60%;
+      margin-bottom: 35px;
+      margin: 0 auto 35px;
+    }
+    @mixin atSmallMedium {
+      font-size: 24px;
+      width: 90%;
+    }
+  }
+
+  &__scroll {
+    display: block;
+    position: absolute;
+    bottom: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+
+    &::after {
+      content: '→';
+      position: absolute;
+      transform: rotate(90deg) translateY(50%);
+      top: 24px;
+      left: 50%;
+      font-size: 160%;
+    }
+  }
+
+  a {
+    color: #fff;
+  }
+}

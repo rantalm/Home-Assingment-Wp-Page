@@ -1,0 +1,35 @@
+.footer-copy {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+
+    @mixin atSmallMedium {
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 5px;
+      font-weight: 100;
+      font-size: 14px;
+    }
+    > * {
+      padding: 0 50px;
+      @mixin atSmallMedium {
+        padding: 10px;
+      }
+      @mixin atMedium {
+        text-align: center;
+      }
+    }
+  }
+
+  &__item {
+    a {
+      padding: 0 10px;
+      display: inline-block;
+    }
+  }
+}

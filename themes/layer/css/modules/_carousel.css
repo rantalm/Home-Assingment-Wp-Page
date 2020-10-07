@@ -1,0 +1,68 @@
+.carousel {
+  &__slide-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    @mixin atMedium {
+      display: block;
+      width: 80%;
+      margin: 0 auto;
+      text-align: center;
+    }
+    @mixin atSmallMedium {
+      width: 95%;
+    }
+  }
+
+  &__img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+
+    @mixin atMedium {
+      margin: 0 auto 20px;
+    }
+  }
+
+  &__content {
+    flex-basis: 70%;
+  }
+
+  &__name {
+    font-size: 30px;
+    margin-bottom: 20px;
+
+    @mixin atSmallMedium {
+      font-size: 22px;
+    }
+  }
+  &__date {
+    font-size: 15px;
+    background-color: rgba($purple, 0.4);
+    padding: 3px 6px;
+    border-radius: 10px;
+    position: relative;
+    bottom: 3px;
+    font-weight: 200;
+
+    @mixin atSmallMedium {
+      display: block;
+      width: 135px;
+      margin: 10px auto;
+    }
+  }
+  &__quote {
+    font-weight: 300;
+  }
+
+  .slick-prev:before,
+  .slick-next:before {
+    font-size: 40px;
+
+    @mixin atSmallMedium {
+      font-size: 24px;
+    }
+  }
+}

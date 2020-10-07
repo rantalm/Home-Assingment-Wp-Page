@@ -1,0 +1,40 @@
+.main-nav {
+  position: absolute;
+  top: 105px;
+  left: -25%;
+  padding: 30px 60px;
+  background-color: rgba($purple, 0.7);
+  border-radius: 10px;
+  transition: all 250ms linear;
+
+  @mixin atMedium {
+    left: -50%;
+    background-color: rgba($purple, 0.9);
+  }
+  @mixin atSmallMedium {
+    left: -100%;
+  }
+
+  &--open {
+    left: 2.5%;
+  }
+  &__item {
+    color: #fff;
+    display: block;
+    text-decoration: none;
+    padding: 10px;
+  }
+  li {
+    display: block;
+    text-decoration: none;
+    padding: 10px;
+    text-align: left;
+    a {
+      color: #fff;
+      text-decoration: none;
+      &:hover {
+        transform: scale(1.5);
+      }
+    }
+  }
+}

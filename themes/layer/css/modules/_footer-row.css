@@ -1,0 +1,14 @@
+.footer-row {
+  height: 80px;
+  width: 100%;
+  position: relative;
+  z-index: 10;
+
+  @mixin atSmallMedium {
+    height: 120px;
+  }
+
+  &:not(:last-child) {
+    border-bottom: 1px solid rgba(#fff, 0.4);
+  }
+}
